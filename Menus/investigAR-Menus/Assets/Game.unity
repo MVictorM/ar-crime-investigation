@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 209021828}
   - component: {fileID: 209021827}
   m_Layer: 5
-  m_Name: phase1
+  m_Name: page1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7989af7390fb27f4b9142d6122cfa4e8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73f12b1e7122ab749bb52555904730a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -309,7 +309,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 26025372e5eaf8b44a28cc0529d3847a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c330cba1689346f4f99fcdeb68a2c231, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -637,7 +637,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6b9019a9ba888c448a1ca9c27953b3e6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2efea08f94cdf7e4aaada0e7f3456a3a, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 1006942266}
   - component: {fileID: 1006942265}
   m_Layer: 5
-  m_Name: phase2
+  m_Name: page3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -802,7 +802,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 08145c5e2940f2c4998a1b6f8069cd80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0efc4d4b5bdd3ca4e94fbc8bd84aa358, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -833,7 +833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1123389250
 RectTransform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ GameObject:
   - component: {fileID: 1537819179}
   - component: {fileID: 1537819178}
   m_Layer: 5
-  m_Name: phase2
+  m_Name: page2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1018,7 +1018,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: beecc56a1f48d4b468f8112ce4a1ba1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0d5cac3c022642741b460e199e598663, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1087,7 +1087,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 907701d13733d4541b126d7c3b529f26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 373d6c53db3fa7740af0eab87a7ba470, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
