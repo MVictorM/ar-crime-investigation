@@ -34,7 +34,13 @@ sysinfo.txt
 
 # Builds
 *.apk
-*.unitypackage
+#*.unitypackage
 
 # Crashlytics generated file
 Assets/StreamingAssets/crashlytics-build.properties
+\.DS_Store
+
+# Build projects
+Menus/investigAR-Menus/iOS-Build/*
+
+\.idea/
