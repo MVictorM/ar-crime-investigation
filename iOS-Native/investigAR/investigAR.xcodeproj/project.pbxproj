@@ -43,6 +43,7 @@
 		71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CAB21C68204002E859E /* GoogleService-Info.plist */; };
 		71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CAE21C6851F002E859E /* ARViewController.swift */; };
 		71C97CB121C6AA1C002E859E /* example.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CB021C6AA1C002E859E /* example.scnassets */; };
+		71C97CB521C6CEEF002E859E /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CB321C6C91A002E859E /* HostViewController.swift */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		71C97CAB21C68204002E859E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71C97CAE21C6851F002E859E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		71C97CB021C6AA1C002E859E /* example.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = example.scnassets; sourceTree = "<group>"; };
+		71C97CB321C6C91A002E859E /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 		71C97C8E21C5F945002E859E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				71C97CB221C6C901002E859E /* Host */,
 				71C97CAD21C68504002E859E /* AR */,
 				71C97C9E21C60F40002E859E /* Tutorial */,
 				71C97C9D21C60AEF002E859E /* Home */,
@@ -266,6 +269,14 @@
 				71C97CAE21C6851F002E859E /* ARViewController.swift */,
 			);
 			path = AR;
+			sourceTree = "<group>";
+		};
+		71C97CB221C6C901002E859E /* Host */ = {
+			isa = PBXGroup;
+			children = (
+				71C97CB321C6C91A002E859E /* HostViewController.swift */,
+			);
+			path = Host;
 			sourceTree = "<group>";
 		};
 		F411E8F1B456834A3110157A /* Pods */ = {
@@ -458,6 +469,7 @@
 				71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */,
 				713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */,
 				71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */,
+				71C97CB521C6CEEF002E859E /* HostViewController.swift in Sources */,
 				71C97C8C21C5F353002E859E /* CrimeDetailsViewController.swift in Sources */,
 				71C97C9021C5F96F002E859E /* Crime.swift in Sources */,
 				713BF37321C5D7E300C05345 /* AppDelegate.swift in Sources */,
