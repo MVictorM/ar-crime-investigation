@@ -92,16 +92,54 @@
         <!--Entrar em investigação-->
         <scene sceneID="LOd-Nd-e1f">
             <objects>
-                <viewController id="f7p-tw-I5j" sceneMemberID="viewController">
+                <viewController id="f7p-tw-I5j" customClass="JoinInvestigationViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ykf-P9-AC7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da Sala" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="og3-ks-q6m">
+                                <rect key="frame" x="20" y="196" width="271" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-IY-O45">
+                                <rect key="frame" x="306" y="194.5" width="49" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapEnterButton:" destination="f7p-tw-I5j" eventType="touchUpInside" id="XGH-zV-Zzu"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investigação não encontrada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F0-Ry-XVp">
+                                <rect key="frame" x="56" y="234" width="199" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.200851898" blue="0.1613619449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6F0-Ry-XVp" firstAttribute="centerX" secondItem="og3-ks-q6m" secondAttribute="centerX" id="1BR-5t-ctM"/>
+                            <constraint firstItem="dfU-IY-O45" firstAttribute="centerY" secondItem="og3-ks-q6m" secondAttribute="centerY" id="39g-lx-flc"/>
+                            <constraint firstItem="dfU-IY-O45" firstAttribute="leading" secondItem="og3-ks-q6m" secondAttribute="trailing" constant="15" id="6fv-ig-Ccy"/>
+                            <constraint firstItem="JOH-rM-Y8u" firstAttribute="trailing" secondItem="dfU-IY-O45" secondAttribute="trailing" constant="20" id="JnW-bs-cL6"/>
+                            <constraint firstItem="og3-ks-q6m" firstAttribute="centerY" secondItem="JOH-rM-Y8u" secondAttribute="centerY" multiplier="0.7" id="Uio-D4-Mfp"/>
+                            <constraint firstItem="og3-ks-q6m" firstAttribute="leading" secondItem="JOH-rM-Y8u" secondAttribute="leading" constant="20" id="j8a-bd-iv2"/>
+                            <constraint firstItem="6F0-Ry-XVp" firstAttribute="top" secondItem="og3-ks-q6m" secondAttribute="bottom" constant="8" id="y0s-Lf-htY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="JOH-rM-Y8u"/>
                     </view>
                     <navigationItem key="navigationItem" title="Entrar em investigação" id="CwG-vq-eQe">
                         <barButtonItem key="backBarButtonItem" title=" " id="rP0-Gf-QOA"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="enterButton" destination="dfU-IY-O45" id="cxf-sQ-rV4"/>
+                        <outlet property="errorLabel" destination="6F0-Ry-XVp" id="3Gn-ui-Y5L"/>
+                        <outlet property="roomNumberTextField" destination="og3-ks-q6m" id="0Ph-VV-QOm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfM-gi-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
