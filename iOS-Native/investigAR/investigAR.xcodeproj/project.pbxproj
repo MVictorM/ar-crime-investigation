@@ -30,6 +30,9 @@
 		71C97C8021C5E4A7002E859E /* Barlow-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C6E21C5E4A5002E859E /* Barlow-Bold.ttf */; };
 		71C97C8121C5E4A7002E859E /* Barlow-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C6F21C5E4A6002E859E /* Barlow-Black.ttf */; };
 		71C97C8221C5E4A7002E859E /* Barlow-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C7021C5E4A7002E859E /* Barlow-Light.ttf */; };
+		71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8421C5EB1F002E859E /* CrimeCollectionViewCell.swift */; };
+		71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8621C5EBB8002E859E /* CrimePlayersTableViewCell.swift */; };
+		71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +64,9 @@
 		71C97C6E21C5E4A5002E859E /* Barlow-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Bold.ttf"; sourceTree = "<group>"; };
 		71C97C6F21C5E4A6002E859E /* Barlow-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Black.ttf"; sourceTree = "<group>"; };
 		71C97C7021C5E4A7002E859E /* Barlow-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barlow-Light.ttf"; sourceTree = "<group>"; };
+		71C97C8421C5EB1F002E859E /* CrimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		71C97C8621C5EBB8002E859E /* CrimePlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimePlayersTableViewCell.swift; sourceTree = "<group>"; };
+		71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvestigationViewController.swift; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -105,6 +111,7 @@
 		713BF37121C5D7E300C05345 /* investigAR */ = {
 			isa = PBXGroup;
 			children = (
+				71C97C8321C5EAE9002E859E /* New Investigation */,
 				71C97C5E21C5E44F002E859E /* Fonts */,
 				713BF37221C5D7E300C05345 /* AppDelegate.swift */,
 				713BF37421C5D7E300C05345 /* HomeViewController.swift */,
@@ -139,6 +146,16 @@
 				71C97C6221C5E497002E859E /* Barlow-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		71C97C8321C5EAE9002E859E /* New Investigation */ = {
+			isa = PBXGroup;
+			children = (
+				71C97C8421C5EB1F002E859E /* CrimeCollectionViewCell.swift */,
+				71C97C8621C5EBB8002E859E /* CrimePlayersTableViewCell.swift */,
+				71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */,
+			);
+			path = "New Investigation";
 			sourceTree = "<group>";
 		};
 		F411E8F1B456834A3110157A /* Pods */ = {
@@ -315,6 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */,
+				71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */,
+				71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */,
 				713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */,
 				713BF37321C5D7E300C05345 /* AppDelegate.swift in Sources */,
 			);
