@@ -258,6 +258,9 @@
                                 <state key="normal" title="Entrar em investigação">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gai-le-UdZ" kind="show" identifier="toWaitingRoom" id="QRD-52-h8l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -278,7 +281,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AUA-B7-1Sb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Crime details" id="17e-ZS-EFf"/>
+                    <navigationItem key="navigationItem" title="Crime details" id="17e-ZS-EFf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="PpX-nO-TFI"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionLabel" destination="TPJ-4Q-cpN" id="HT8-90-5S6"/>
                         <outlet property="investigatorsLabel" destination="Yjh-hT-vLW" id="8mJ-cu-msI"/>
@@ -314,6 +319,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3GK-if-TVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="216.80000000000001" y="68.815592203898049"/>
+        </scene>
+        <!--Número: XXXX-->
+        <scene sceneID="NJd-7w-SwC">
+            <objects>
+                <viewController id="gai-le-UdZ" customClass="WaitingRoomViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uGd-Sn-upr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzT-kH-yBC">
+                                <rect key="frame" x="47" y="492" width="281" height="41"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uzT-kH-yBC" secondAttribute="height" multiplier="34:5" id="AJc-3M-XXq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="investigAR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-28-Jdm">
+                                <rect key="frame" x="20" y="236.5" width="335" height="130"/>
+                                <string key="text">O corpo de um estimado membro da cidade é encontrado. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor,</string>
+                                <fontDescription key="fontDescription" name="Barlow-Light" family="Barlow" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 turnos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-Ug-rqh">
+                                <rect key="frame" x="20" y="386.5" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-oM-X33">
+                                <rect key="frame" x="20" y="412.5" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epE-sq-TdO">
+                                <rect key="frame" x="69" y="87.5" width="237" height="36"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="30"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-tu-3F3">
+                                <rect key="frame" x="158" y="553" width="59" height="30"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="15"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCancelButton:" destination="gai-le-UdZ" eventType="touchUpInside" id="ltY-SF-vYB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="width" secondItem="uGd-Sn-upr" secondAttribute="width" multiplier="0.75" id="51Q-tw-qdG"/>
+                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="0.35" id="6UJ-Nt-YXo"/>
+                            <constraint firstItem="cfV-Ug-rqh" firstAttribute="leading" secondItem="0x7-28-Jdm" secondAttribute="leading" id="IRx-Kz-rXK"/>
+                            <constraint firstItem="cfV-Ug-rqh" firstAttribute="top" secondItem="0x7-28-Jdm" secondAttribute="bottom" constant="20" id="ImB-te-g5q"/>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="1.7" id="Ult-L7-07r"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" id="WSY-ic-2g1"/>
+                            <constraint firstItem="hJo-tu-3F3" firstAttribute="centerX" secondItem="uzT-kH-yBC" secondAttribute="centerX" id="XpQ-5R-JRT"/>
+                            <constraint firstItem="hJo-tu-3F3" firstAttribute="top" secondItem="uzT-kH-yBC" secondAttribute="bottom" constant="20" id="aOv-nn-AHd"/>
+                            <constraint firstItem="Fte-oM-X33" firstAttribute="top" secondItem="cfV-Ug-rqh" secondAttribute="bottom" constant="5" id="d0J-Ot-A6B"/>
+                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="dqS-7r-W5t"/>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="gWH-dj-jLI"/>
+                            <constraint firstItem="hjZ-jz-MCf" firstAttribute="trailing" secondItem="0x7-28-Jdm" secondAttribute="trailing" constant="20" id="gZR-FN-Vkl"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="leading" secondItem="hjZ-jz-MCf" secondAttribute="leading" constant="20" id="j3B-s4-9y0"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="mtt-oP-2pf"/>
+                            <constraint firstItem="Fte-oM-X33" firstAttribute="leading" secondItem="cfV-Ug-rqh" secondAttribute="leading" id="tub-XN-sQH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hjZ-jz-MCf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Número: XXXX" id="KXb-sF-wha"/>
+                    <connections>
+                        <outlet property="crimeDetailsLabel" destination="0x7-28-Jdm" id="ONM-aL-R5l"/>
+                        <outlet property="investigateButton" destination="uzT-kH-yBC" id="iTK-dE-JHa"/>
+                        <outlet property="timeLabel" destination="Fte-oM-X33" id="0Ui-YY-EMa"/>
+                        <outlet property="turnsLabel" destination="cfV-Ug-rqh" id="9xy-c9-eTj"/>
+                        <outlet property="waitingCounterLabel" destination="epE-sq-TdO" id="qBD-ze-8Bm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IZ-rc-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="814"/>
         </scene>
     </scenes>
     <resources>

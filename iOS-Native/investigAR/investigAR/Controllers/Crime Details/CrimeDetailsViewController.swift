@@ -27,5 +27,11 @@ class CrimeDetailsViewController: UIViewController {
         self.turnsLabel.text = "\(self.crime.numberTurns) turnos"
         self.timeLabel.text = "\(self.crime.estimatedDuration) minutos"
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let waitingRoom = segue.destination as? WaitingRoomViewController {
+            waitingRoom.crime = self.crime
+        }
+    }
 
 }
