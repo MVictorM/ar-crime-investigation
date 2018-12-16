@@ -38,6 +38,8 @@
 		71C97C9221C5F9C9002E859E /* CrimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9121C5F9C9002E859E /* CrimeProvider.swift */; };
 		71C97C9521C60271002E859E /* WaitingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9421C60271002E859E /* WaitingRoomViewController.swift */; };
 		71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */; };
+		71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C9A21C60AD2002E859E /* Game.storyboard */; };
+		71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		71C97C9121C5F9C9002E859E /* CrimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeProvider.swift; sourceTree = "<group>"; };
 		71C97C9421C60271002E859E /* WaitingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomViewController.swift; sourceTree = "<group>"; };
 		71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInvestigationViewController.swift; sourceTree = "<group>"; };
+		71C97C9A21C60AD2002E859E /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
+		71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,10 +129,8 @@
 				71C97C8D21C5F93E002E859E /* Model */,
 				71C97C5E21C5E44F002E859E /* Fonts */,
 				713BF37221C5D7E300C05345 /* AppDelegate.swift */,
-				713BF37421C5D7E300C05345 /* HomeViewController.swift */,
-				713BF37621C5D7E300C05345 /* Main.storyboard */,
 				713BF37921C5D7E500C05345 /* Assets.xcassets */,
-				713BF37B21C5D7E500C05345 /* LaunchScreen.storyboard */,
+				71C97C9C21C60ADA002E859E /* Views */,
 				713BF37E21C5D7E500C05345 /* Info.plist */,
 			);
 			path = investigAR;
@@ -189,6 +191,9 @@
 		71C97C8E21C5F945002E859E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				71C97C9E21C60F40002E859E /* Tutorial */,
+				71C97C9D21C60AEF002E859E /* Home */,
+				71C97C9921C60A8F002E859E /* Game Tutorial */,
 				71C97C9621C607D7002E859E /* Join Investigation */,
 				71C97C9321C6025D002E859E /* Waiting Room */,
 				71C97C8A21C5F339002E859E /* Crime Details */,
@@ -211,6 +216,39 @@
 				71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */,
 			);
 			path = "Join Investigation";
+			sourceTree = "<group>";
+		};
+		71C97C9921C60A8F002E859E /* Game Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Game Tutorial";
+			sourceTree = "<group>";
+		};
+		71C97C9C21C60ADA002E859E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				713BF37621C5D7E300C05345 /* Main.storyboard */,
+				713BF37B21C5D7E500C05345 /* LaunchScreen.storyboard */,
+				71C97C9A21C60AD2002E859E /* Game.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		71C97C9D21C60AEF002E859E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				713BF37421C5D7E300C05345 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		71C97C9E21C60F40002E859E /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		F411E8F1B456834A3110157A /* Pods */ = {
@@ -303,6 +341,7 @@
 				71C97C7321C5E4A7002E859E /* Barlow-Regular.ttf in Resources */,
 				71C97C7B21C5E4A7002E859E /* Barlow-ExtraLightItalic.ttf in Resources */,
 				713BF37821C5D7E300C05345 /* Main.storyboard in Resources */,
+				71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */,
 				71C97C7721C5E4A7002E859E /* Barlow-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +433,7 @@
 				71C97C9521C60271002E859E /* WaitingRoomViewController.swift in Sources */,
 				71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */,
 				713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */,
+				71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */,
 				71C97C8C21C5F353002E859E /* CrimeDetailsViewController.swift in Sources */,
 				71C97C9021C5F96F002E859E /* Crime.swift in Sources */,
 				713BF37321C5D7E300C05345 /* AppDelegate.swift in Sources */,
