@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j40-sF-CfU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Barlow-Bold.ttf">
+            <string>Barlow-Bold</string>
+        </array>
+        <array key="Barlow-Light.ttf">
+            <string>Barlow-Light</string>
+        </array>
+        <array key="Barlow-Regular.ttf">
+            <string>Barlow-Regular</string>
+        </array>
+        <array key="Barlow-SemiBold.ttf">
+            <string>Barlow-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topTape" translatesAutoresizingMaskIntoConstraints="NO" id="QZe-RC-027">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="236"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="investigAR" translatesAutoresizingMaskIntoConstraints="NO" id="5iu-2x-4Gc">
+                                <rect key="frame" x="96" y="283" width="183" height="37"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIB-fn-EQ7">
+                                <rect key="frame" x="47" y="431.5" width="281" height="41.5"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FIB-fn-EQ7" secondAttribute="height" multiplier="34:5" id="0kk-zW-cK6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="Entrar em investigação">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="f7p-tw-I5j" kind="show" id="YXT-oc-gAl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2CY-5h-XrX">
+                                <rect key="frame" x="47" y="513" width="281" height="41.5"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="Investigar novo crime">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CKc-ab-pxL" kind="show" id="qG5-s8-JUf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5iu-2x-4Gc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A2c-fa-bB3"/>
+                            <constraint firstItem="FIB-fn-EQ7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.5" id="Fwx-4l-JHu"/>
+                            <constraint firstItem="QZe-RC-027" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GsM-jK-vLA"/>
+                            <constraint firstItem="5iu-2x-4Gc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Pgv-eU-3Pa"/>
+                            <constraint firstItem="QZe-RC-027" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ryn-Xe-fqc"/>
+                            <constraint firstItem="QZe-RC-027" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="U4b-no-Mfv"/>
+                            <constraint firstItem="FIB-fn-EQ7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f0Y-AV-4lT"/>
+                            <constraint firstItem="2CY-5h-XrX" firstAttribute="top" secondItem="FIB-fn-EQ7" secondAttribute="bottom" constant="40" id="hEO-bD-S8Z"/>
+                            <constraint firstItem="2CY-5h-XrX" firstAttribute="width" secondItem="FIB-fn-EQ7" secondAttribute="width" id="nnm-Dg-qIh"/>
+                            <constraint firstItem="FIB-fn-EQ7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="nuE-rQ-Ffv"/>
+                            <constraint firstItem="2CY-5h-XrX" firstAttribute="centerX" secondItem="FIB-fn-EQ7" secondAttribute="centerX" id="qhs-OW-3Zy"/>
+                            <constraint firstItem="2CY-5h-XrX" firstAttribute="height" secondItem="FIB-fn-EQ7" secondAttribute="height" id="rRv-Rx-pMZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u5S-Je-t0s">
+                        <barButtonItem key="backBarButtonItem" title=" " id="1cl-As-dQM"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="68.815592203898049"/>
+        </scene>
+        <!--Entrar em investigação-->
+        <scene sceneID="LOd-Nd-e1f">
+            <objects>
+                <viewController id="f7p-tw-I5j" customClass="JoinInvestigationViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ykf-P9-AC7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número da Sala" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="og3-ks-q6m">
+                                <rect key="frame" x="20" y="196" width="271" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfU-IY-O45">
+                                <rect key="frame" x="306" y="194.5" width="49" height="33"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapEnterButton:" destination="f7p-tw-I5j" eventType="touchUpInside" id="XGH-zV-Zzu"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investigação não encontrada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F0-Ry-XVp">
+                                <rect key="frame" x="56" y="234" width="199" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.200851898" blue="0.1613619449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6F0-Ry-XVp" firstAttribute="centerX" secondItem="og3-ks-q6m" secondAttribute="centerX" id="1BR-5t-ctM"/>
+                            <constraint firstItem="dfU-IY-O45" firstAttribute="centerY" secondItem="og3-ks-q6m" secondAttribute="centerY" id="39g-lx-flc"/>
+                            <constraint firstItem="dfU-IY-O45" firstAttribute="leading" secondItem="og3-ks-q6m" secondAttribute="trailing" constant="15" id="6fv-ig-Ccy"/>
+                            <constraint firstItem="JOH-rM-Y8u" firstAttribute="trailing" secondItem="dfU-IY-O45" secondAttribute="trailing" constant="20" id="JnW-bs-cL6"/>
+                            <constraint firstItem="og3-ks-q6m" firstAttribute="centerY" secondItem="JOH-rM-Y8u" secondAttribute="centerY" multiplier="0.7" id="Uio-D4-Mfp"/>
+                            <constraint firstItem="og3-ks-q6m" firstAttribute="leading" secondItem="JOH-rM-Y8u" secondAttribute="leading" constant="20" id="j8a-bd-iv2"/>
+                            <constraint firstItem="6F0-Ry-XVp" firstAttribute="top" secondItem="og3-ks-q6m" secondAttribute="bottom" constant="8" id="y0s-Lf-htY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JOH-rM-Y8u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Entrar em investigação" id="CwG-vq-eQe">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rP0-Gf-QOA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enterButton" destination="dfU-IY-O45" id="cxf-sQ-rV4"/>
+                        <outlet property="errorLabel" destination="6F0-Ry-XVp" id="3Gn-ui-Y5L"/>
+                        <outlet property="roomNumberTextField" destination="og3-ks-q6m" id="0Ph-VV-QOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FfM-gi-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.8" y="68.815592203898049"/>
+        </scene>
+        <!--Investigar novo crime-->
+        <scene sceneID="zEX-dC-6RC">
+            <objects>
+                <viewController id="CKc-ab-pxL" customClass="NewInvestigationViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o3o-kl-0ls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="233" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="One-lx-Kr0">
+                                <rect key="frame" x="0.0" y="35" width="375" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CrimePlayersTableViewCell" rowHeight="233" id="U2n-Cs-Ltn" customClass="CrimePlayersTableViewCell" customModule="investigAR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="233"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U2n-Cs-Ltn" id="fod-R6-cRj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-5Q-ttX">
+                                                    <rect key="frame" x="20" y="0.0" width="121" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zt5-LK-Ro5">
+                                                    <rect key="frame" x="20" y="30" width="355" height="163"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FWe-bF-OEh">
+                                                        <size key="itemSize" width="180" height="150"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CrimeCollectionViewCell" id="OLB-xi-bkn" customClass="CrimeCollectionViewCell" customModule="investigAR" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="6.5" width="180" height="150"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell" translatesAutoresizingMaskIntoConstraints="NO" id="wod-gu-OQd">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRh-Kc-AnA">
+                                                                        <rect key="frame" x="64.5" y="63" width="51" height="24"/>
+                                                                        <fontDescription key="fontDescription" name="Barlow-Bold" family="Barlow" pointSize="20"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="tRh-Kc-AnA" firstAttribute="centerX" secondItem="wod-gu-OQd" secondAttribute="centerX" id="HRU-Af-FTY"/>
+                                                                <constraint firstItem="wod-gu-OQd" firstAttribute="width" secondItem="OLB-xi-bkn" secondAttribute="width" id="QRN-Ci-DSm"/>
+                                                                <constraint firstItem="wod-gu-OQd" firstAttribute="centerY" secondItem="OLB-xi-bkn" secondAttribute="centerY" id="Sye-eW-Hvt"/>
+                                                                <constraint firstItem="wod-gu-OQd" firstAttribute="centerX" secondItem="OLB-xi-bkn" secondAttribute="centerX" id="pe4-lv-eaO"/>
+                                                                <constraint firstItem="wod-gu-OQd" firstAttribute="height" secondItem="OLB-xi-bkn" secondAttribute="height" id="qRe-DG-0BI"/>
+                                                                <constraint firstItem="tRh-Kc-AnA" firstAttribute="centerY" secondItem="wod-gu-OQd" secondAttribute="centerY" id="uRC-CF-K0p"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="backgroundImage" destination="wod-gu-OQd" id="zBg-o5-WLL"/>
+                                                                <outlet property="titleLabel" destination="tRh-Kc-AnA" id="5wp-ue-rNo"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="lx3-5Q-ttX" firstAttribute="leading" secondItem="fod-R6-cRj" secondAttribute="leading" constant="20" id="A7c-Fu-d1E"/>
+                                                <constraint firstItem="zt5-LK-Ro5" firstAttribute="top" secondItem="lx3-5Q-ttX" secondAttribute="bottom" constant="10" id="Fn7-Y6-8Jb"/>
+                                                <constraint firstItem="zt5-LK-Ro5" firstAttribute="leading" secondItem="lx3-5Q-ttX" secondAttribute="leading" id="glQ-Db-tYN"/>
+                                                <constraint firstItem="lx3-5Q-ttX" firstAttribute="top" secondItem="fod-R6-cRj" secondAttribute="top" id="hkE-BM-ypy"/>
+                                                <constraint firstAttribute="trailing" secondItem="zt5-LK-Ro5" secondAttribute="trailing" id="j3e-hg-gC5"/>
+                                                <constraint firstAttribute="bottom" secondItem="zt5-LK-Ro5" secondAttribute="bottom" constant="40" id="l1d-hY-WfG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="crimeCollectionView" destination="zt5-LK-Ro5" id="QaE-a9-FPZ"/>
+                                            <outlet property="titleLabel" destination="lx3-5Q-ttX" id="Bp9-E6-Kqu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="One-lx-Kr0" firstAttribute="width" secondItem="o3o-kl-0ls" secondAttribute="width" id="1fg-Vo-Ffu"/>
+                            <constraint firstItem="One-lx-Kr0" firstAttribute="centerX" secondItem="ZaG-k4-HXO" secondAttribute="centerX" id="Uqx-lN-6tg"/>
+                            <constraint firstItem="ZaG-k4-HXO" firstAttribute="bottom" secondItem="One-lx-Kr0" secondAttribute="bottom" id="iQI-n1-cgI"/>
+                            <constraint firstItem="One-lx-Kr0" firstAttribute="top" secondItem="ZaG-k4-HXO" secondAttribute="top" constant="35" id="szT-xd-5dp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZaG-k4-HXO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Investigar novo crime" id="BRV-cK-Oih">
+                        <barButtonItem key="backBarButtonItem" title=" " id="rcH-av-EPR"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="crimePlayersTableView" destination="One-lx-Kr0" id="7Rc-UU-dPm"/>
+                        <segue destination="mKv-FP-kQ4" kind="show" identifier="toCrimeDetails" id="kHc-oH-gDX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5jJ-Lh-KRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="819"/>
+        </scene>
+        <!--Crime details-->
+        <scene sceneID="YFX-Wx-knK">
+            <objects>
+                <viewController id="mKv-FP-kQ4" customClass="CrimeDetailsViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVt-Wz-EWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPJ-4Q-cpN">
+                                <rect key="frame" x="20" y="35" width="335" height="185"/>
+                                <string key="text">O corpo de um estimado membro da cidade é encontrado. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor,</string>
+                                <fontDescription key="fontDescription" name="Barlow-Light" family="Barlow" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-hT-vLW">
+                                <rect key="frame" x="20" y="275" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.9137254901960784" green="0.80392156862745101" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 turnos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvH-5d-2P2">
+                                <rect key="frame" x="20" y="301" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-H7-2Hy">
+                                <rect key="frame" x="20" y="327" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-tO-wd4">
+                                <rect key="frame" x="47" y="492" width="281" height="41"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pc0-tO-wd4" secondAttribute="height" multiplier="34:5" id="yB7-SS-kes"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="Entrar em investigação">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gai-le-UdZ" kind="show" identifier="toWaitingRoom" id="QRD-52-h8l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="centerX" secondItem="AUA-B7-1Sb" secondAttribute="centerX" id="0XE-eB-a5d"/>
+                            <constraint firstItem="kvH-5d-2P2" firstAttribute="top" secondItem="Yjh-hT-vLW" secondAttribute="bottom" constant="5" id="5rB-jW-wG4"/>
+                            <constraint firstItem="GjL-H7-2Hy" firstAttribute="leading" secondItem="kvH-5d-2P2" secondAttribute="leading" id="FOw-IO-4BR"/>
+                            <constraint firstItem="AUA-B7-1Sb" firstAttribute="trailing" secondItem="TPJ-4Q-cpN" secondAttribute="trailing" constant="20" id="IGY-Fz-Mah"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="centerY" secondItem="AUA-B7-1Sb" secondAttribute="centerY" multiplier="1.7" id="JFZ-Or-2RU"/>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="leading" secondItem="AUA-B7-1Sb" secondAttribute="leading" constant="20" id="Lx7-Vd-AAb"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="centerX" secondItem="AUA-B7-1Sb" secondAttribute="centerX" id="OZH-R7-Hrp"/>
+                            <constraint firstItem="Yjh-hT-vLW" firstAttribute="top" secondItem="TPJ-4Q-cpN" secondAttribute="bottom" constant="55" id="RUA-at-iBR"/>
+                            <constraint firstItem="Yjh-hT-vLW" firstAttribute="leading" secondItem="TPJ-4Q-cpN" secondAttribute="leading" id="SEZ-YQ-Hlt"/>
+                            <constraint firstItem="kvH-5d-2P2" firstAttribute="leading" secondItem="Yjh-hT-vLW" secondAttribute="leading" id="X5g-aK-X5n"/>
+                            <constraint firstItem="GjL-H7-2Hy" firstAttribute="top" secondItem="kvH-5d-2P2" secondAttribute="bottom" constant="5" id="YwF-w6-DZR"/>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="top" secondItem="AUA-B7-1Sb" secondAttribute="top" constant="35" id="dGL-gC-ghD"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="width" secondItem="DVt-Wz-EWf" secondAttribute="width" multiplier="0.75" id="gEn-mG-ohj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AUA-B7-1Sb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crime details" id="17e-ZS-EFf">
+                        <barButtonItem key="backBarButtonItem" title=" " id="PpX-nO-TFI"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="TPJ-4Q-cpN" id="HT8-90-5S6"/>
+                        <outlet property="investigatorsLabel" destination="Yjh-hT-vLW" id="8mJ-cu-msI"/>
+                        <outlet property="timeLabel" destination="GjL-H7-2Hy" id="pEy-uI-yHO"/>
+                        <outlet property="turnsLabel" destination="kvH-5d-2P2" id="akK-0W-tKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEX-MA-c6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.8" y="813.64317841079469"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ku1-Gr-frh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j40-sF-CfU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="KKF-eV-H2j">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Barlow-Medium" family="Barlow" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rhN-08-5Wj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GK-if-TVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216.80000000000001" y="68.815592203898049"/>
+        </scene>
+        <!--Número: XXXX-->
+        <scene sceneID="NJd-7w-SwC">
+            <objects>
+                <viewController id="gai-le-UdZ" customClass="WaitingRoomViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uGd-Sn-upr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzT-kH-yBC">
+                                <rect key="frame" x="47" y="492" width="281" height="41"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uzT-kH-yBC" secondAttribute="height" multiplier="34:5" id="AJc-3M-XXq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="investigAR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-28-Jdm">
+                                <rect key="frame" x="20" y="236.5" width="335" height="130"/>
+                                <string key="text">O corpo de um estimado membro da cidade é encontrado. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor,</string>
+                                <fontDescription key="fontDescription" name="Barlow-Light" family="Barlow" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 turnos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-Ug-rqh">
+                                <rect key="frame" x="20" y="386.5" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-oM-X33">
+                                <rect key="frame" x="20" y="412.5" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epE-sq-TdO">
+                                <rect key="frame" x="69" y="87.5" width="237" height="36"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="30"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-tu-3F3">
+                                <rect key="frame" x="158" y="553" width="59" height="30"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="15"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapCancelButton:" destination="gai-le-UdZ" eventType="touchUpInside" id="ltY-SF-vYB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="width" secondItem="uGd-Sn-upr" secondAttribute="width" multiplier="0.75" id="51Q-tw-qdG"/>
+                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="0.35" id="6UJ-Nt-YXo"/>
+                            <constraint firstItem="cfV-Ug-rqh" firstAttribute="leading" secondItem="0x7-28-Jdm" secondAttribute="leading" id="IRx-Kz-rXK"/>
+                            <constraint firstItem="cfV-Ug-rqh" firstAttribute="top" secondItem="0x7-28-Jdm" secondAttribute="bottom" constant="20" id="ImB-te-g5q"/>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="1.7" id="Ult-L7-07r"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" id="WSY-ic-2g1"/>
+                            <constraint firstItem="hJo-tu-3F3" firstAttribute="centerX" secondItem="uzT-kH-yBC" secondAttribute="centerX" id="XpQ-5R-JRT"/>
+                            <constraint firstItem="hJo-tu-3F3" firstAttribute="top" secondItem="uzT-kH-yBC" secondAttribute="bottom" constant="20" id="aOv-nn-AHd"/>
+                            <constraint firstItem="Fte-oM-X33" firstAttribute="top" secondItem="cfV-Ug-rqh" secondAttribute="bottom" constant="5" id="d0J-Ot-A6B"/>
+                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="dqS-7r-W5t"/>
+                            <constraint firstItem="uzT-kH-yBC" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="gWH-dj-jLI"/>
+                            <constraint firstItem="hjZ-jz-MCf" firstAttribute="trailing" secondItem="0x7-28-Jdm" secondAttribute="trailing" constant="20" id="gZR-FN-Vkl"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="leading" secondItem="hjZ-jz-MCf" secondAttribute="leading" constant="20" id="j3B-s4-9y0"/>
+                            <constraint firstItem="0x7-28-Jdm" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="mtt-oP-2pf"/>
+                            <constraint firstItem="Fte-oM-X33" firstAttribute="leading" secondItem="cfV-Ug-rqh" secondAttribute="leading" id="tub-XN-sQH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hjZ-jz-MCf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Número: XXXX" id="KXb-sF-wha"/>
+                    <connections>
+                        <outlet property="crimeDetailsLabel" destination="0x7-28-Jdm" id="ONM-aL-R5l"/>
+                        <outlet property="investigateButton" destination="uzT-kH-yBC" id="iTK-dE-JHa"/>
+                        <outlet property="timeLabel" destination="Fte-oM-X33" id="0Ui-YY-EMa"/>
+                        <outlet property="turnsLabel" destination="cfV-Ug-rqh" id="9xy-c9-eTj"/>
+                        <outlet property="waitingCounterLabel" destination="epE-sq-TdO" id="qBD-ze-8Bm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6IZ-rc-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="814"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cell" width="190" height="159"/>
+        <image name="investigAR" width="183" height="37"/>
+        <image name="topTape" width="375" height="236"/>
+    </resources>
+</document>
