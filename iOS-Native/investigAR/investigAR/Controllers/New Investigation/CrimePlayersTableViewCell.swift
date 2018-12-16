@@ -10,7 +10,8 @@ import UIKit
 
 class CrimePlayersTableViewCell: UITableViewCell {
 
-    var crimes: [String] = []
+    var crimes: [Crime] = []
+    var collectionViewDelegate: UICollectionViewDelegate?
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var crimeCollectionView: UICollectionView!
     
@@ -33,7 +34,13 @@ extension CrimePlayersTableViewCell: UICollectionViewDataSource {
             fatalError("Unexpected cell type/identifier")
         }
         
-        cell.titleLabel.text = self.crimes[indexPath.row].uppercased()
+        let crime = self.crimes[indexPath.row]
+        cell.titleLabel.text = crime.title.uppercased()
+        
+        if !crime.available {
+            cell.alpha = 0.5
+            cell.isUserInteractionEnabled = false
+        }
         
         return cell
     }

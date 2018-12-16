@@ -11,10 +11,7 @@ import UIKit
 class NewInvestigationViewController: UIViewController {
     
     let minPlayers = 4
-    lazy var crimePlayers = [
-        self.minPlayers: ["Estudo em Rosa", "Banqueiro cego"],
-        self.minPlayers + 1: ["Noite no Cinema", "Caixão vazio"]
-    ]
+    lazy var playersCrimes = CrimeProvider.shared.playersCrimes
     
     @IBOutlet weak var crimePlayersTableView: UITableView!
     
@@ -25,11 +22,19 @@ class NewInvestigationViewController: UIViewController {
         self.crimePlayersTableView.dataSource = self
         self.crimePlayersTableView.tableFooterView = UIView()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let detailsVC = segue.destination as? CrimeDetailsViewController {
+            detailsVC.crime = sender as? Crime
+        }
+    }
 }
 
 extension NewInvestigationViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.crimePlayers.count
+        return self.playersCrimes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,11 +46,21 @@ extension NewInvestigationViewController: UITableViewDataSource {
         let numPlayers = self.minPlayers + indexPath.row
         cell.titleLabel.text = "\(numPlayers) jogadores"
 
-        guard let crimes = self.crimePlayers[numPlayers] else {
+        guard let crimes = self.playersCrimes[numPlayers] else {
             fatalError("unexpected numPlayers \(numPlayers)")
         }
         cell.crimes = crimes
         
+        cell.crimeCollectionView.delegate = self
+        cell.crimeCollectionView.tag = numPlayers
+        
         return cell
+    }
+}
+
+extension NewInvestigationViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCrime = self.playersCrimes[collectionView.tag]![indexPath.row]
+        self.performSegue(withIdentifier: "toCrimeDetails", sender: selectedCrime)
     }
 }

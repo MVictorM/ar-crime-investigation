@@ -13,6 +13,9 @@
         <array key="Barlow-Bold.ttf">
             <string>Barlow-Bold</string>
         </array>
+        <array key="Barlow-Light.ttf">
+            <string>Barlow-Light</string>
+        </array>
         <array key="Barlow-Regular.ttf">
             <string>Barlow-Regular</string>
         </array>
@@ -205,11 +208,87 @@
                     </navigationItem>
                     <connections>
                         <outlet property="crimePlayersTableView" destination="One-lx-Kr0" id="7Rc-UU-dPm"/>
+                        <segue destination="mKv-FP-kQ4" kind="show" identifier="toCrimeDetails" id="kHc-oH-gDX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5jJ-Lh-KRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1156" y="819"/>
+        </scene>
+        <!--Crime details-->
+        <scene sceneID="YFX-Wx-knK">
+            <objects>
+                <viewController id="mKv-FP-kQ4" customClass="CrimeDetailsViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVt-Wz-EWf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPJ-4Q-cpN">
+                                <rect key="frame" x="20" y="35" width="335" height="185"/>
+                                <string key="text">O corpo de um estimado membro da cidade é encontrado. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor,</string>
+                                <fontDescription key="fontDescription" name="Barlow-Light" family="Barlow" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjh-hT-vLW">
+                                <rect key="frame" x="20" y="275" width="121.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.9137254901960784" green="0.80392156862745101" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 turnos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kvH-5d-2P2">
+                                <rect key="frame" x="20" y="301" width="67" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-H7-2Hy">
+                                <rect key="frame" x="20" y="327" width="82.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
+                                <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pc0-tO-wd4">
+                                <rect key="frame" x="47" y="492" width="281" height="41"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pc0-tO-wd4" secondAttribute="height" multiplier="34:5" id="yB7-SS-kes"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <state key="normal" title="Entrar em investigação">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="centerX" secondItem="AUA-B7-1Sb" secondAttribute="centerX" id="0XE-eB-a5d"/>
+                            <constraint firstItem="kvH-5d-2P2" firstAttribute="top" secondItem="Yjh-hT-vLW" secondAttribute="bottom" constant="5" id="5rB-jW-wG4"/>
+                            <constraint firstItem="GjL-H7-2Hy" firstAttribute="leading" secondItem="kvH-5d-2P2" secondAttribute="leading" id="FOw-IO-4BR"/>
+                            <constraint firstItem="AUA-B7-1Sb" firstAttribute="trailing" secondItem="TPJ-4Q-cpN" secondAttribute="trailing" constant="20" id="IGY-Fz-Mah"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="centerY" secondItem="AUA-B7-1Sb" secondAttribute="centerY" multiplier="1.7" id="JFZ-Or-2RU"/>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="leading" secondItem="AUA-B7-1Sb" secondAttribute="leading" constant="20" id="Lx7-Vd-AAb"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="centerX" secondItem="AUA-B7-1Sb" secondAttribute="centerX" id="OZH-R7-Hrp"/>
+                            <constraint firstItem="Yjh-hT-vLW" firstAttribute="top" secondItem="TPJ-4Q-cpN" secondAttribute="bottom" constant="55" id="RUA-at-iBR"/>
+                            <constraint firstItem="Yjh-hT-vLW" firstAttribute="leading" secondItem="TPJ-4Q-cpN" secondAttribute="leading" id="SEZ-YQ-Hlt"/>
+                            <constraint firstItem="kvH-5d-2P2" firstAttribute="leading" secondItem="Yjh-hT-vLW" secondAttribute="leading" id="X5g-aK-X5n"/>
+                            <constraint firstItem="GjL-H7-2Hy" firstAttribute="top" secondItem="kvH-5d-2P2" secondAttribute="bottom" constant="5" id="YwF-w6-DZR"/>
+                            <constraint firstItem="TPJ-4Q-cpN" firstAttribute="top" secondItem="AUA-B7-1Sb" secondAttribute="top" constant="35" id="dGL-gC-ghD"/>
+                            <constraint firstItem="pc0-tO-wd4" firstAttribute="width" secondItem="DVt-Wz-EWf" secondAttribute="width" multiplier="0.75" id="gEn-mG-ohj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AUA-B7-1Sb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Crime details" id="17e-ZS-EFf"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="TPJ-4Q-cpN" id="HT8-90-5S6"/>
+                        <outlet property="investigatorsLabel" destination="Yjh-hT-vLW" id="8mJ-cu-msI"/>
+                        <outlet property="timeLabel" destination="GjL-H7-2Hy" id="pEy-uI-yHO"/>
+                        <outlet property="turnsLabel" destination="kvH-5d-2P2" id="akK-0W-tKL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEX-MA-c6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936.8" y="813.64317841079469"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ku1-Gr-frh">

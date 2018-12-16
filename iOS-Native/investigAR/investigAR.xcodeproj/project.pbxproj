@@ -33,6 +33,9 @@
 		71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8421C5EB1F002E859E /* CrimeCollectionViewCell.swift */; };
 		71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8621C5EBB8002E859E /* CrimePlayersTableViewCell.swift */; };
 		71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */; };
+		71C97C8C21C5F353002E859E /* CrimeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8B21C5F353002E859E /* CrimeDetailsViewController.swift */; };
+		71C97C9021C5F96F002E859E /* Crime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C8F21C5F96F002E859E /* Crime.swift */; };
+		71C97C9221C5F9C9002E859E /* CrimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9121C5F9C9002E859E /* CrimeProvider.swift */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,9 @@
 		71C97C8421C5EB1F002E859E /* CrimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		71C97C8621C5EBB8002E859E /* CrimePlayersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimePlayersTableViewCell.swift; sourceTree = "<group>"; };
 		71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvestigationViewController.swift; sourceTree = "<group>"; };
+		71C97C8B21C5F353002E859E /* CrimeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeDetailsViewController.swift; sourceTree = "<group>"; };
+		71C97C8F21C5F96F002E859E /* Crime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crime.swift; sourceTree = "<group>"; };
+		71C97C9121C5F9C9002E859E /* CrimeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrimeProvider.swift; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,7 +117,8 @@
 		713BF37121C5D7E300C05345 /* investigAR */ = {
 			isa = PBXGroup;
 			children = (
-				71C97C8321C5EAE9002E859E /* New Investigation */,
+				71C97C8E21C5F945002E859E /* Controllers */,
+				71C97C8D21C5F93E002E859E /* Model */,
 				71C97C5E21C5E44F002E859E /* Fonts */,
 				713BF37221C5D7E300C05345 /* AppDelegate.swift */,
 				713BF37421C5D7E300C05345 /* HomeViewController.swift */,
@@ -156,6 +163,32 @@
 				71C97C8821C5EC28002E859E /* NewInvestigationViewController.swift */,
 			);
 			path = "New Investigation";
+			sourceTree = "<group>";
+		};
+		71C97C8A21C5F339002E859E /* Crime Details */ = {
+			isa = PBXGroup;
+			children = (
+				71C97C8B21C5F353002E859E /* CrimeDetailsViewController.swift */,
+			);
+			path = "Crime Details";
+			sourceTree = "<group>";
+		};
+		71C97C8D21C5F93E002E859E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71C97C8F21C5F96F002E859E /* Crime.swift */,
+				71C97C9121C5F9C9002E859E /* CrimeProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		71C97C8E21C5F945002E859E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				71C97C8A21C5F339002E859E /* Crime Details */,
+				71C97C8321C5EAE9002E859E /* New Investigation */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F411E8F1B456834A3110157A /* Pods */ = {
@@ -333,9 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */,
+				71C97C9221C5F9C9002E859E /* CrimeProvider.swift in Sources */,
 				71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */,
 				71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */,
 				713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */,
+				71C97C8C21C5F353002E859E /* CrimeDetailsViewController.swift in Sources */,
+				71C97C9021C5F96F002E859E /* Crime.swift in Sources */,
 				713BF37321C5D7E300C05345 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
