@@ -82,7 +82,7 @@ class ARViewController: UIViewController {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if (touches.count < 1 || self.state != .HelloARStateRoomCreated) {
-            return;
+            return
         }
         
         let touch = touches.first!
@@ -148,8 +148,12 @@ class ARViewController: UIViewController {
         
         // To share an anchor, we call host anchor here on the ARCore session.
         // session:disHostAnchor: session:didFailToHostAnchor: will get called appropriately.
-        self.garAnchor = try! self.gSession!.hostCloudAnchor(self.arAnchor!)
-        self.enterState(.HelloARStateHosting)
+        do {
+            self.garAnchor = try self.gSession!.hostCloudAnchor(self.arAnchor!)
+            self.enterState(.HelloARStateHosting)
+        } catch {
+            print(error)
+        }
     }
     
     
@@ -235,7 +239,7 @@ class ARViewController: UIViewController {
                 self.message = "Tap HOST or RESOLVE to begin."
             }
             if (self.state == .HelloARStateEnterRoomCode) {
-                self.dismiss(animated: false)
+//                self.dismiss(animated: false)
             } else if (self.state == .HelloARStateResolving) {
                 self.firebaseReference!.child("hotspot_list").child(self.roomCode!)
                     .removeAllObservers()
@@ -264,7 +268,7 @@ class ARViewController: UIViewController {
             self.showRoomCodeDialog()
             
         case .HelloARStateResolving:
-            self.dismiss(animated: false)
+//            self.dismiss(animated: false)
             self.message = "Resolving anchor..."
             self.toggle(button: self.hostButton, enabled: false, title: "HOST")
             self.toggle(button: self.resolveButton, enabled: true, title: "CANCEL")
@@ -313,8 +317,8 @@ class ARViewController: UIViewController {
                     if error != nil {
                         weakSelf?.roomCreationFailed()
                     } else {
-                        let roomNumber = snapshot!.value! as! String
-                        weakSelf?.roomCreated(roomCode: roomNumber)
+                        let roomNumber = snapshot!.value! as! NSNumber
+                        weakSelf?.roomCreated(roomCode: roomNumber.stringValue)
                     }
                 }
             })
@@ -407,7 +411,7 @@ extension ARViewController: GARSessionDelegate {
         
         self.enterState(.HelloARStateHostingFinished)
         
-        self.firebaseReference?.child("hotspot_list").child(self.roomCode!)
+        self.firebaseReference?.child("hotspot_list").child(self.roomCode!).child("hosted_anchor_id")
             .setValue(anchor.cloudIdentifier)
         
         let timestampInteger = Date().timeIntervalSince1970 * 1000

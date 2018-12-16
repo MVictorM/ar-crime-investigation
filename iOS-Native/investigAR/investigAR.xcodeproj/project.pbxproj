@@ -42,6 +42,7 @@
 		71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */; };
 		71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CAB21C68204002E859E /* GoogleService-Info.plist */; };
 		71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CAE21C6851F002E859E /* ARViewController.swift */; };
+		71C97CB121C6AA1C002E859E /* example.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CB021C6AA1C002E859E /* example.scnassets */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
 		71C97CAB21C68204002E859E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71C97CAE21C6851F002E859E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		71C97CB021C6AA1C002E859E /* example.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = example.scnassets; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 		713BF37121C5D7E300C05345 /* investigAR */ = {
 			isa = PBXGroup;
 			children = (
+				71C97CB021C6AA1C002E859E /* example.scnassets */,
 				71C97C8E21C5F945002E859E /* Controllers */,
 				71C97C8D21C5F93E002E859E /* Model */,
 				71C97C5E21C5E44F002E859E /* Fonts */,
@@ -353,6 +356,7 @@
 				71C97C8021C5E4A7002E859E /* Barlow-Bold.ttf in Resources */,
 				71C97C7C21C5E4A7002E859E /* Barlow-SemiBold.ttf in Resources */,
 				71C97C7321C5E4A7002E859E /* Barlow-Regular.ttf in Resources */,
+				71C97CB121C6AA1C002E859E /* example.scnassets in Resources */,
 				71C97C7B21C5E4A7002E859E /* Barlow-ExtraLightItalic.ttf in Resources */,
 				713BF37821C5D7E300C05345 /* Main.storyboard in Resources */,
 				71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */,
