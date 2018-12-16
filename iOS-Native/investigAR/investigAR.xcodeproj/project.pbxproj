@@ -40,6 +40,7 @@
 		71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */; };
 		71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C9A21C60AD2002E859E /* Game.storyboard */; };
 		71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */; };
+		71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CAB21C68204002E859E /* GoogleService-Info.plist */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInvestigationViewController.swift; sourceTree = "<group>"; };
 		71C97C9A21C60AD2002E859E /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		71C97CAB21C68204002E859E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				713BF37921C5D7E500C05345 /* Assets.xcassets */,
 				71C97C9C21C60ADA002E859E /* Views */,
 				713BF37E21C5D7E500C05345 /* Info.plist */,
+				71C97CAB21C68204002E859E /* GoogleService-Info.plist */,
 			);
 			path = investigAR;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				713BF37821C5D7E300C05345 /* Main.storyboard in Resources */,
 				71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */,
 				71C97C7721C5E4A7002E859E /* Barlow-ExtraBoldItalic.ttf in Resources */,
+				71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +365,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -369,6 +375,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -591,7 +599,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pintor.investigAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pintor.investigAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -611,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pintor.investigAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pintor.investigAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
