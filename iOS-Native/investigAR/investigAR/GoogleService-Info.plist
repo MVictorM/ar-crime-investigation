@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>133259398414-ofv83hmvp5vm6v430k9ubc1donmql97l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.133259398414-ofv83hmvp5vm6v430k9ubc1donmql97l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCo7R5rGud6lTw_Cak4cATnZUo1Nj8GF_I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>133259398414</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.pintor.investigAR</string>
+	<key>PROJECT_ID</key>
+	<string>cadeira-de-ra</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cadeira-de-ra.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:133259398414:ios:9de016410a60d4a0</string>
+	<key>DATABASE_URL</key>
+	<string>https://cadeira-de-ra.firebaseio.com</string>
+</dict>
+</plist>

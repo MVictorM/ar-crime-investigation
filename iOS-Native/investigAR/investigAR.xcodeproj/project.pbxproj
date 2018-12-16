@@ -40,6 +40,9 @@
 		71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */; };
 		71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C97C9A21C60AD2002E859E /* Game.storyboard */; };
 		71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */; };
+		71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CAB21C68204002E859E /* GoogleService-Info.plist */; };
+		71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CAE21C6851F002E859E /* ARViewController.swift */; };
+		71C97CB121C6AA1C002E859E /* example.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CB021C6AA1C002E859E /* example.scnassets */; };
 		D5E449940125B11243DE2993 /* Pods_investigAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C23123852889C4F8769F3ED /* Pods_investigAR.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinInvestigationViewController.swift; sourceTree = "<group>"; };
 		71C97C9A21C60AD2002E859E /* Game.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Game.storyboard; sourceTree = "<group>"; };
 		71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		71C97CAB21C68204002E859E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		71C97CAE21C6851F002E859E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		71C97CB021C6AA1C002E859E /* example.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = example.scnassets; sourceTree = "<group>"; };
 		7C23123852889C4F8769F3ED /* Pods_investigAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_investigAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +131,7 @@
 		713BF37121C5D7E300C05345 /* investigAR */ = {
 			isa = PBXGroup;
 			children = (
+				71C97CB021C6AA1C002E859E /* example.scnassets */,
 				71C97C8E21C5F945002E859E /* Controllers */,
 				71C97C8D21C5F93E002E859E /* Model */,
 				71C97C5E21C5E44F002E859E /* Fonts */,
@@ -132,6 +139,7 @@
 				713BF37921C5D7E500C05345 /* Assets.xcassets */,
 				71C97C9C21C60ADA002E859E /* Views */,
 				713BF37E21C5D7E500C05345 /* Info.plist */,
+				71C97CAB21C68204002E859E /* GoogleService-Info.plist */,
 			);
 			path = investigAR;
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 		71C97C8E21C5F945002E859E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				71C97CAD21C68504002E859E /* AR */,
 				71C97C9E21C60F40002E859E /* Tutorial */,
 				71C97C9D21C60AEF002E859E /* Home */,
 				71C97C9921C60A8F002E859E /* Game Tutorial */,
@@ -249,6 +258,14 @@
 				71C97C9F21C60F68002E859E /* TutorialPageViewController.swift */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		71C97CAD21C68504002E859E /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				71C97CAE21C6851F002E859E /* ARViewController.swift */,
+			);
+			path = AR;
 			sourceTree = "<group>";
 		};
 		F411E8F1B456834A3110157A /* Pods */ = {
@@ -339,10 +356,12 @@
 				71C97C8021C5E4A7002E859E /* Barlow-Bold.ttf in Resources */,
 				71C97C7C21C5E4A7002E859E /* Barlow-SemiBold.ttf in Resources */,
 				71C97C7321C5E4A7002E859E /* Barlow-Regular.ttf in Resources */,
+				71C97CB121C6AA1C002E859E /* example.scnassets in Resources */,
 				71C97C7B21C5E4A7002E859E /* Barlow-ExtraLightItalic.ttf in Resources */,
 				713BF37821C5D7E300C05345 /* Main.storyboard in Resources */,
 				71C97C9B21C60AD2002E859E /* Game.storyboard in Resources */,
 				71C97C7721C5E4A7002E859E /* Barlow-ExtraBoldItalic.ttf in Resources */,
+				71C97CAC21C68204002E859E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +380,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -369,6 +390,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -429,6 +452,7 @@
 				71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */,
 				71C97C9221C5F9C9002E859E /* CrimeProvider.swift in Sources */,
 				71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */,
+				71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */,
 				71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */,
 				71C97C9521C60271002E859E /* WaitingRoomViewController.swift in Sources */,
 				71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */,
@@ -591,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pintor.investigAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pintor.investigAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -611,7 +635,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pintor.investigAR;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pintor.investigAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
