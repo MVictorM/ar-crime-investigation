@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -122,6 +123,10 @@
                                 <color key="textColor" red="1" green="0.200851898" blue="0.1613619449" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2VK-gI-9vx">
+                                <rect key="frame" x="312" y="192.5" width="37" height="37"/>
+                                <color key="color" name="Yellow"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -129,6 +134,8 @@
                             <constraint firstItem="dfU-IY-O45" firstAttribute="centerY" secondItem="og3-ks-q6m" secondAttribute="centerY" id="39g-lx-flc"/>
                             <constraint firstItem="dfU-IY-O45" firstAttribute="leading" secondItem="og3-ks-q6m" secondAttribute="trailing" constant="15" id="6fv-ig-Ccy"/>
                             <constraint firstItem="JOH-rM-Y8u" firstAttribute="trailing" secondItem="dfU-IY-O45" secondAttribute="trailing" constant="20" id="JnW-bs-cL6"/>
+                            <constraint firstItem="2VK-gI-9vx" firstAttribute="centerX" secondItem="dfU-IY-O45" secondAttribute="centerX" id="KBr-fb-Y4z"/>
+                            <constraint firstItem="2VK-gI-9vx" firstAttribute="centerY" secondItem="dfU-IY-O45" secondAttribute="centerY" id="Q8E-Lv-hnw"/>
                             <constraint firstItem="og3-ks-q6m" firstAttribute="centerY" secondItem="JOH-rM-Y8u" secondAttribute="centerY" multiplier="0.7" id="Uio-D4-Mfp"/>
                             <constraint firstItem="og3-ks-q6m" firstAttribute="leading" secondItem="JOH-rM-Y8u" secondAttribute="leading" constant="20" id="j8a-bd-iv2"/>
                             <constraint firstItem="6F0-Ry-XVp" firstAttribute="top" secondItem="og3-ks-q6m" secondAttribute="bottom" constant="8" id="y0s-Lf-htY"/>
@@ -139,9 +146,11 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="rP0-Gf-QOA"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="2VK-gI-9vx" id="dln-H4-BZA"/>
                         <outlet property="enterButton" destination="dfU-IY-O45" id="cxf-sQ-rV4"/>
                         <outlet property="errorLabel" destination="6F0-Ry-XVp" id="3Gn-ui-Y5L"/>
                         <outlet property="roomNumberTextField" destination="og3-ks-q6m" id="0Ph-VV-QOm"/>
+                        <segue destination="vnr-yd-ejN" kind="presentation" identifier="toResolve" id="eX8-Zc-rv6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfM-gi-guG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -502,10 +511,69 @@
             </objects>
             <point key="canvasLocation" x="2654" y="814"/>
         </scene>
+        <!--Resolve View Controller-->
+        <scene sceneID="uTY-Ca-HDG">
+            <objects>
+                <viewController id="vnr-yd-ejN" customClass="ResolveViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmM-pF-bS4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5r-Lt-iVe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aponte para o plano" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tn-TB-pLs">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="0.79858732880000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8hG-2b-Bce"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hko-tw-QGc">
+                                <rect key="frame" x="137" y="580" width="101" height="39"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="22"/>
+                                <state key="normal" title="Fixar cena">
+                                    <color key="titleColor" name="Yellow"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapResolveButton:" destination="vnr-yd-ejN" eventType="touchUpInside" id="n1Q-1n-j0t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hko-tw-QGc" firstAttribute="centerX" secondItem="cOV-aU-ie4" secondAttribute="centerX" id="7Hw-Js-1uG"/>
+                            <constraint firstItem="m5r-Lt-iVe" firstAttribute="leading" secondItem="cOV-aU-ie4" secondAttribute="leading" id="84e-9b-7gK"/>
+                            <constraint firstItem="cOV-aU-ie4" firstAttribute="trailing" secondItem="m5r-Lt-iVe" secondAttribute="trailing" id="Caq-LH-dB5"/>
+                            <constraint firstAttribute="bottom" secondItem="m5r-Lt-iVe" secondAttribute="bottom" id="Htu-PC-zn1"/>
+                            <constraint firstItem="1Tn-TB-pLs" firstAttribute="top" secondItem="hko-tw-QGc" secondAttribute="bottom" constant="8" id="JAK-Yv-aQp"/>
+                            <constraint firstItem="1Tn-TB-pLs" firstAttribute="centerX" secondItem="cOV-aU-ie4" secondAttribute="centerX" id="RdS-on-qSy"/>
+                            <constraint firstItem="m5r-Lt-iVe" firstAttribute="top" secondItem="tmM-pF-bS4" secondAttribute="top" id="lSx-cw-mH7"/>
+                            <constraint firstItem="cOV-aU-ie4" firstAttribute="bottom" secondItem="1Tn-TB-pLs" secondAttribute="bottom" id="p4a-24-kBl"/>
+                            <constraint firstItem="1Tn-TB-pLs" firstAttribute="width" secondItem="tmM-pF-bS4" secondAttribute="width" id="t7M-lk-n9Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cOV-aU-ie4"/>
+                    </view>
+                    <connections>
+                        <outlet property="resolveButton" destination="hko-tw-QGc" id="grc-y8-gR2"/>
+                        <outlet property="sceneView" destination="m5r-Lt-iVe" id="UE2-Z0-b4S"/>
+                        <outlet property="statusLabel" destination="1Tn-TB-pLs" id="hL1-9y-Mhg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4BY-A8-l1B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="69"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cell" width="190" height="159"/>
         <image name="investigAR" width="183" height="37"/>
         <image name="topTape" width="375" height="236"/>
+        <namedColor name="Yellow">
+            <color red="0.9137254901960784" green="0.80392156862745101" blue="0.027450980392156862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
