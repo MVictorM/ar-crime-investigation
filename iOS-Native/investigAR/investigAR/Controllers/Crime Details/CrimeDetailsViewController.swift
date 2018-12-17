@@ -29,8 +29,8 @@ class CrimeDetailsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let waitingRoom = segue.destination as? WaitingRoomViewController {
-            waitingRoom.crime = self.crime
+        if let hostVC = segue.destination as? HostViewController {
+            hostVC.crime = self.crime
         }
     }
 

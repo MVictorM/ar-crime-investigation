@@ -21,6 +21,7 @@ class WaitingRoomViewController: UIViewController {
     @IBOutlet weak var turnsLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var investigateButton: UIButton!
+    @IBOutlet weak var roomNumberLabel: UILabel!
     
     @IBAction func tapCancelButton(_ sender: Any) {
     }
@@ -28,7 +29,7 @@ class WaitingRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationItem.title = "Número: \(1234)" // TODO: Add real room number
+        self.roomNumberLabel.text = "Número: \(self.crime.roomNumber!)"
         self.crimeDetailsLabel.text = self.crime.description
         self.turnsLabel.text = "\(self.crime.numberTurns) turnos"
         self.timeLabel.text = "\(self.crime.estimatedDuration) minutos"

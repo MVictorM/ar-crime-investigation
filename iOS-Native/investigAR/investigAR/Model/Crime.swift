@@ -15,4 +15,16 @@ struct Crime {
     let numberTurns: Int
     let estimatedDuration: Int
     let available: Bool
+    var roomNumber: Int?
+    
+    init(title: String, description: String, numberInvestigators: Int, numberTurns: Int,
+         estimatedDuration: Int, available: Bool, roomNumber: Int? = nil) {
+        self.title = title
+        self.description = description
+        self.numberInvestigators = numberInvestigators
+        self.numberTurns = numberTurns
+        self.estimatedDuration = estimatedDuration
+        self.available = available
+        self.roomNumber = roomNumber
+    }
 }
