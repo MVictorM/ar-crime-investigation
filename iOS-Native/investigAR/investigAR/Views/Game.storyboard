@@ -116,9 +116,6 @@
                                 <state key="normal" title="investigAR">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="IJd-B3-sWD" kind="show" id="lvz-Nu-Wc1"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,49 +135,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="enc-7G-2T8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2319" y="107"/>
-        </scene>
-        <!--Host View Controller-->
-        <scene sceneID="pM0-UI-IXK">
-            <objects>
-                <viewController id="IJd-B3-sWD" customClass="HostViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XHc-DM-wQI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0I1-en-p1O">
-                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="0.79858732876712324" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="fKf-G1-r3J"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Rl-YL-T96">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </arscnView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bWT-JE-Yvt" firstAttribute="bottom" secondItem="0I1-en-p1O" secondAttribute="bottom" id="4mb-zc-cl6"/>
-                            <constraint firstItem="0I1-en-p1O" firstAttribute="centerX" secondItem="bWT-JE-Yvt" secondAttribute="centerX" id="AIL-yz-8mh"/>
-                            <constraint firstItem="bWT-JE-Yvt" firstAttribute="trailing" secondItem="8Rl-YL-T96" secondAttribute="trailing" id="BDd-j4-Nar"/>
-                            <constraint firstItem="8Rl-YL-T96" firstAttribute="bottom" secondItem="XHc-DM-wQI" secondAttribute="bottom" id="F9F-5n-QDE"/>
-                            <constraint firstAttribute="top" secondItem="8Rl-YL-T96" secondAttribute="top" id="abT-7U-gLg"/>
-                            <constraint firstItem="8Rl-YL-T96" firstAttribute="leading" secondItem="bWT-JE-Yvt" secondAttribute="leading" id="bLW-N2-yMA"/>
-                            <constraint firstItem="0I1-en-p1O" firstAttribute="width" secondItem="XHc-DM-wQI" secondAttribute="width" id="yR2-Sz-qPj"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="bWT-JE-Yvt"/>
-                    </view>
-                    <connections>
-                        <outlet property="sceneView" destination="8Rl-YL-T96" id="OEj-Mg-qWB"/>
-                        <outlet property="statusLabel" destination="0I1-en-p1O" id="BXg-0x-2Qg"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jLu-xw-jzm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3148" y="107"/>
         </scene>
         <!--Kidnapping View Controller-->
         <scene sceneID="GiF-70-jMd">

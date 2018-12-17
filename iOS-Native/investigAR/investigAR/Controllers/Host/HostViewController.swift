@@ -59,6 +59,12 @@ class HostViewController: UIViewController {
         self.enterState(.start)
         
         self.createRoom()
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.view.backgroundColor = UIColor.clear
     }
     
     override func viewWillAppear(_ animated: Bool) {

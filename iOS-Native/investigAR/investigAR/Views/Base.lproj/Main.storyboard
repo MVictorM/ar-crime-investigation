@@ -293,11 +293,11 @@
                                     <constraint firstAttribute="width" secondItem="pc0-tO-wd4" secondAttribute="height" multiplier="34:5" id="yB7-SS-kes"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
-                                <state key="normal" title="Entrar em investigação">
+                                <state key="normal" title="Iniciar investigação">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gai-le-UdZ" kind="show" identifier="toWaitingRoom" id="QRD-52-h8l"/>
+                                    <segue destination="XZj-vd-inW" kind="show" id="hdR-Ov-Lyg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -363,11 +363,11 @@
             <objects>
                 <viewController id="gai-le-UdZ" customClass="WaitingRoomViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uGd-Sn-upr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzT-kH-yBC">
-                                <rect key="frame" x="47" y="492" width="281" height="41"/>
+                                <rect key="frame" x="47" y="563.5" width="281" height="41"/>
                                 <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uzT-kH-yBC" secondAttribute="height" multiplier="34:5" id="AJc-3M-XXq"/>
@@ -378,32 +378,32 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0x7-28-Jdm">
-                                <rect key="frame" x="20" y="236.5" width="335" height="130"/>
+                                <rect key="frame" x="20" y="278.5" width="335" height="130"/>
                                 <string key="text">O corpo de um estimado membro da cidade é encontrado. Existem muitas variações das passagens do Lorem Ipsum disponíveis, mas a maior parte sofreu alterações de alguma forma, pela injecção de humor,</string>
                                 <fontDescription key="fontDescription" name="Barlow-Light" family="Barlow" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 turnos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfV-Ug-rqh">
-                                <rect key="frame" x="20" y="386.5" width="67" height="21"/>
+                                <rect key="frame" x="20" y="428.5" width="67" height="21"/>
                                 <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                                 <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 minutos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fte-oM-X33">
-                                <rect key="frame" x="20" y="412.5" width="82.5" height="21"/>
+                                <rect key="frame" x="20" y="454.5" width="82.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                                 <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epE-sq-TdO">
-                                <rect key="frame" x="69" y="87.5" width="237" height="36"/>
+                                <rect key="frame" x="69" y="102" width="237" height="36"/>
                                 <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="30"/>
                                 <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJo-tu-3F3">
-                                <rect key="frame" x="158" y="553" width="59" height="30"/>
+                                <rect key="frame" x="158" y="624.5" width="59" height="30"/>
                                 <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="15"/>
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -444,7 +444,50 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6IZ-rc-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="814"/>
+            <point key="canvasLocation" x="3518" y="814"/>
+        </scene>
+        <!--Host View Controller-->
+        <scene sceneID="f8l-gr-OzM">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="XZj-vd-inW" customClass="HostViewController" customModule="investigAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bXQ-sx-w6A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-5f-IKe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-zW-uYu">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="0.79858732880000005" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4tE-Ig-YZJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="top" secondItem="eN1-5f-IKe" secondAttribute="top" id="0e9-Wz-wap"/>
+                            <constraint firstItem="mAA-6f-J4L" firstAttribute="bottom" secondItem="LKI-zW-uYu" secondAttribute="bottom" id="B3U-sw-d20"/>
+                            <constraint firstItem="mAA-6f-J4L" firstAttribute="trailing" secondItem="eN1-5f-IKe" secondAttribute="trailing" id="QdD-3K-DGP"/>
+                            <constraint firstItem="LKI-zW-uYu" firstAttribute="width" secondItem="bXQ-sx-w6A" secondAttribute="width" id="dma-Oj-uML"/>
+                            <constraint firstItem="LKI-zW-uYu" firstAttribute="centerX" secondItem="mAA-6f-J4L" secondAttribute="centerX" id="kXd-V9-MAd"/>
+                            <constraint firstItem="eN1-5f-IKe" firstAttribute="bottom" secondItem="bXQ-sx-w6A" secondAttribute="bottom" id="r08-PF-9A0"/>
+                            <constraint firstItem="eN1-5f-IKe" firstAttribute="leading" secondItem="mAA-6f-J4L" secondAttribute="leading" id="zGM-Jw-Dpt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mAA-6f-J4L"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="eN1-5f-IKe" id="jen-8h-zMx"/>
+                        <outlet property="statusLabel" destination="LKI-zW-uYu" id="9Mg-Um-b9T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4RU-yJ-wWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="814"/>
         </scene>
     </scenes>
     <resources>
