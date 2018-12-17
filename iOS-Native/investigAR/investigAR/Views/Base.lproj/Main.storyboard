@@ -16,6 +16,9 @@
         <array key="Barlow-Light.ttf">
             <string>Barlow-Light</string>
         </array>
+        <array key="Barlow-Medium.ttf">
+            <string>Barlow-Medium</string>
+        </array>
         <array key="Barlow-Regular.ttf">
             <string>Barlow-Regular</string>
         </array>
@@ -397,7 +400,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/4 investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epE-sq-TdO">
-                                <rect key="frame" x="69" y="102" width="237" height="36"/>
+                                <rect key="frame" x="69" y="136.5" width="237" height="36"/>
                                 <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="30"/>
                                 <color key="textColor" red="0.91372549020000005" green="0.80392156859999997" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -412,11 +415,17 @@
                                     <action selector="tapCancelButton:" destination="gai-le-UdZ" eventType="touchUpInside" id="ltY-SF-vYB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número: XXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sgi-k0-Qoh">
+                                <rect key="frame" x="116.5" y="31" width="142" height="27"/>
+                                <fontDescription key="fontDescription" name="Barlow-Medium" family="Barlow" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uzT-kH-yBC" firstAttribute="width" secondItem="uGd-Sn-upr" secondAttribute="width" multiplier="0.75" id="51Q-tw-qdG"/>
-                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="0.35" id="6UJ-Nt-YXo"/>
+                            <constraint firstItem="epE-sq-TdO" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="0.45" id="6UJ-Nt-YXo"/>
                             <constraint firstItem="cfV-Ug-rqh" firstAttribute="leading" secondItem="0x7-28-Jdm" secondAttribute="leading" id="IRx-Kz-rXK"/>
                             <constraint firstItem="cfV-Ug-rqh" firstAttribute="top" secondItem="0x7-28-Jdm" secondAttribute="bottom" constant="20" id="ImB-te-g5q"/>
                             <constraint firstItem="uzT-kH-yBC" firstAttribute="centerY" secondItem="hjZ-jz-MCf" secondAttribute="centerY" multiplier="1.7" id="Ult-L7-07r"/>
@@ -427,8 +436,10 @@
                             <constraint firstItem="epE-sq-TdO" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="dqS-7r-W5t"/>
                             <constraint firstItem="uzT-kH-yBC" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="gWH-dj-jLI"/>
                             <constraint firstItem="hjZ-jz-MCf" firstAttribute="trailing" secondItem="0x7-28-Jdm" secondAttribute="trailing" constant="20" id="gZR-FN-Vkl"/>
+                            <constraint firstItem="sgi-k0-Qoh" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="hzN-hI-mEn"/>
                             <constraint firstItem="0x7-28-Jdm" firstAttribute="leading" secondItem="hjZ-jz-MCf" secondAttribute="leading" constant="20" id="j3B-s4-9y0"/>
                             <constraint firstItem="0x7-28-Jdm" firstAttribute="centerX" secondItem="hjZ-jz-MCf" secondAttribute="centerX" id="mtt-oP-2pf"/>
+                            <constraint firstItem="sgi-k0-Qoh" firstAttribute="top" secondItem="hjZ-jz-MCf" secondAttribute="top" constant="11" id="qRQ-Pt-zu8"/>
                             <constraint firstItem="Fte-oM-X33" firstAttribute="leading" secondItem="cfV-Ug-rqh" secondAttribute="leading" id="tub-XN-sQH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hjZ-jz-MCf"/>
@@ -437,6 +448,7 @@
                     <connections>
                         <outlet property="crimeDetailsLabel" destination="0x7-28-Jdm" id="ONM-aL-R5l"/>
                         <outlet property="investigateButton" destination="uzT-kH-yBC" id="iTK-dE-JHa"/>
+                        <outlet property="roomNumberLabel" destination="sgi-k0-Qoh" id="g1l-IC-yOt"/>
                         <outlet property="timeLabel" destination="Fte-oM-X33" id="0Ui-YY-EMa"/>
                         <outlet property="turnsLabel" destination="cfV-Ug-rqh" id="9xy-c9-eTj"/>
                         <outlet property="waitingCounterLabel" destination="epE-sq-TdO" id="qBD-ze-8Bm"/>
@@ -483,6 +495,7 @@
                     <connections>
                         <outlet property="sceneView" destination="eN1-5f-IKe" id="jen-8h-zMx"/>
                         <outlet property="statusLabel" destination="LKI-zW-uYu" id="9Mg-Um-b9T"/>
+                        <segue destination="gai-le-UdZ" kind="presentation" identifier="toWaitingRoom" id="8iU-EW-Wr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RU-yJ-wWE" userLabel="First Responder" sceneMemberID="firstResponder"/>

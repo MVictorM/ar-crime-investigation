@@ -34,11 +34,17 @@ class HostViewController: UIViewController {
     var state: HostARState?
     var roomCode: String?
     var statusMessage: String?
+    var crime: Crime!
     
     
     // Mark - Overriding UIViewController
-    override var prefersStatusBarHidden: Bool {
-        return true
+    fileprivate func transparentNavBar() {
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+
     }
     
     override func viewDidLoad() {
@@ -60,11 +66,7 @@ class HostViewController: UIViewController {
         
         self.createRoom()
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor.clear
-        self.navigationController?.view.backgroundColor = UIColor.clear
+        self.transparentNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,6 +101,12 @@ class HostViewController: UIViewController {
         if (hitTestResults.count > 0) {
             let result = hitTestResults.first!
             self.addAnchor(transform: result.worldTransform)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let waitingRoom = segue.destination as? WaitingRoomViewController {
+            waitingRoom.crime = self.crime
         }
     }
     
@@ -137,23 +145,25 @@ class HostViewController: UIViewController {
                 self.garAnchor = nil
             }
             if (self.state == .creatingRoom) {
-                self.statusMessage = "Failed to create room. Tap HOST or RESOLVE to begin."
+                self.statusMessage = "Falha na criação da investigação, tente novamente."
             } else {
                 self.statusMessage = "Tap HOST or RESOLVE to begin."
             }
             self.roomCode = ""
             
         case .creatingRoom:
-            self.statusMessage = "Creating room..."
+            self.statusMessage = "Criando investigação..."
             
         case .roomCreated:
-            self.statusMessage = "Tap on a plane to create anchor and host."
+            self.statusMessage = "Toque em um plano para fixar a cena do crime."
             
         case .hosting:
-            self.statusMessage = "Hosting anchor..."
+            self.statusMessage = "Fixando cena..."
             
         case .hostingFinished:
-            self.statusMessage = "Finished hosting: \(self.garAnchor!.cloudState.message))"
+            self.statusMessage = "Cena fixada: \(self.garAnchor!.cloudState.message)"
+            self.crime.roomNumber = Int(self.roomCode!)!
+            self.performSegue(withIdentifier: "toWaitingRoom", sender: nil)
         }
         
         self.state = state
