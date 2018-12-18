@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6717961F21C8837500D6971A /* TrialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6717961E21C8837500D6971A /* TrialViewController.swift */; };
+		6717962121C888FC00D6971A /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6717962021C888FC00D6971A /* Characters.swift */; };
+		6717962321C88BA000D6971A /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6717962221C88BA000D6971A /* GameResult.swift */; };
 		713BF37321C5D7E300C05345 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF37221C5D7E300C05345 /* AppDelegate.swift */; };
 		713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713BF37421C5D7E300C05345 /* HomeViewController.swift */; };
 		713BF37821C5D7E300C05345 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 713BF37621C5D7E300C05345 /* Main.storyboard */; };
@@ -44,7 +47,6 @@
 		71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CAE21C6851F002E859E /* ARViewController.swift */; };
 		71C97CB121C6AA1C002E859E /* example.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 71C97CB021C6AA1C002E859E /* example.scnassets */; };
 		71C97CB521C6CEEF002E859E /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C97CB321C6C91A002E859E /* HostViewController.swift */; };
-		71EAB9B921C6F69900727B68 /* GameWinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAB9B821C6F69900727B68 /* GameWinViewController.swift */; };
 		71EAB9BB21C7038800727B68 /* KidnappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAB9BA21C7038800727B68 /* KidnappingViewController.swift */; };
 		71EAB9BD21C703D400727B68 /* InnocentExecutedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAB9BC21C703D400727B68 /* InnocentExecutedViewController.swift */; };
 		71EAB9BF21C703F900727B68 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EAB9BE21C703F900727B68 /* GameOverViewController.swift */; };
@@ -56,6 +58,9 @@
 /* Begin PBXFileReference section */
 		0CFFC25B9FEBBBD248ED6695 /* Pods-investigAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investigAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-investigAR/Pods-investigAR.release.xcconfig"; sourceTree = "<group>"; };
 		5A8E8D79BC41E11553EC29C4 /* Pods-investigAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-investigAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-investigAR/Pods-investigAR.debug.xcconfig"; sourceTree = "<group>"; };
+		6717961E21C8837500D6971A /* TrialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrialViewController.swift; sourceTree = "<group>"; };
+		6717962021C888FC00D6971A /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		6717962221C88BA000D6971A /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		713BF36F21C5D7E300C05345 /* investigAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = investigAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		713BF37221C5D7E300C05345 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		713BF37421C5D7E300C05345 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -95,7 +100,6 @@
 		71C97CAE21C6851F002E859E /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		71C97CB021C6AA1C002E859E /* example.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = example.scnassets; sourceTree = "<group>"; };
 		71C97CB321C6C91A002E859E /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
-		71EAB9B821C6F69900727B68 /* GameWinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWinViewController.swift; sourceTree = "<group>"; };
 		71EAB9BA21C7038800727B68 /* KidnappingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidnappingViewController.swift; sourceTree = "<group>"; };
 		71EAB9BC21C703D400727B68 /* InnocentExecutedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnocentExecutedViewController.swift; sourceTree = "<group>"; };
 		71EAB9BE21C703F900727B68 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,14 @@
 				7C23123852889C4F8769F3ED /* Pods_investigAR.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6717961D21C8835F00D6971A /* Trial */ = {
+			isa = PBXGroup;
+			children = (
+				6717961E21C8837500D6971A /* TrialViewController.swift */,
+			);
+			path = Trial;
 			sourceTree = "<group>";
 		};
 		713BF36621C5D7E300C05345 = {
@@ -206,6 +218,8 @@
 			children = (
 				71C97C8F21C5F96F002E859E /* Crime.swift */,
 				71C97C9121C5F9C9002E859E /* CrimeProvider.swift */,
+				6717962021C888FC00D6971A /* Characters.swift */,
+				6717962221C88BA000D6971A /* GameResult.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,13 +227,13 @@
 		71C97C8E21C5F945002E859E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6717961D21C8835F00D6971A /* Trial */,
 				71EAB9C221C7E6E800727B68 /* Resolve */,
 				71EAB9B721C6F4B700727B68 /* Judgment */,
 				71C97CB221C6C901002E859E /* Host */,
 				71C97CAD21C68504002E859E /* AR */,
 				71C97C9E21C60F40002E859E /* Tutorial */,
 				71C97C9D21C60AEF002E859E /* Home */,
-				71C97C9921C60A8F002E859E /* Game Tutorial */,
 				71C97C9621C607D7002E859E /* Join Investigation */,
 				71C97C9321C6025D002E859E /* Waiting Room */,
 				71C97C8A21C5F339002E859E /* Crime Details */,
@@ -242,13 +256,6 @@
 				71C97C9721C607FB002E859E /* JoinInvestigationViewController.swift */,
 			);
 			path = "Join Investigation";
-			sourceTree = "<group>";
-		};
-		71C97C9921C60A8F002E859E /* Game Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Game Tutorial";
 			sourceTree = "<group>";
 		};
 		71C97C9C21C60ADA002E859E /* Views */ = {
@@ -297,7 +304,6 @@
 			isa = PBXGroup;
 			children = (
 				71EAB9C021C7D64F00727B68 /* AssassinFoundController.swift */,
-				71EAB9B821C6F69900727B68 /* GameWinViewController.swift */,
 				71EAB9BA21C7038800727B68 /* KidnappingViewController.swift */,
 				71EAB9BC21C703D400727B68 /* InnocentExecutedViewController.swift */,
 				71EAB9BE21C703F900727B68 /* GameOverViewController.swift */,
@@ -495,20 +501,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C97C8521C5EB1F002E859E /* CrimeCollectionViewCell.swift in Sources */,
+				6717962121C888FC00D6971A /* Characters.swift in Sources */,
 				71C97C9221C5F9C9002E859E /* CrimeProvider.swift in Sources */,
 				71C97C8721C5EBB8002E859E /* CrimePlayersTableViewCell.swift in Sources */,
 				71EAB9C421C7E71700727B68 /* ResolveViewController.swift in Sources */,
 				71EAB9C121C7D64F00727B68 /* AssassinFoundController.swift in Sources */,
 				71EAB9BD21C703D400727B68 /* InnocentExecutedViewController.swift in Sources */,
 				71EAB9BF21C703F900727B68 /* GameOverViewController.swift in Sources */,
+				6717961F21C8837500D6971A /* TrialViewController.swift in Sources */,
 				71C97CAF21C6851F002E859E /* ARViewController.swift in Sources */,
+				6717962321C88BA000D6971A /* GameResult.swift in Sources */,
 				71C97C8921C5EC28002E859E /* NewInvestigationViewController.swift in Sources */,
 				71C97C9521C60271002E859E /* WaitingRoomViewController.swift in Sources */,
 				71C97C9821C607FB002E859E /* JoinInvestigationViewController.swift in Sources */,
 				71EAB9BB21C7038800727B68 /* KidnappingViewController.swift in Sources */,
 				713BF37521C5D7E300C05345 /* HomeViewController.swift in Sources */,
 				71C97CA021C60F68002E859E /* TutorialPageViewController.swift in Sources */,
-				71EAB9B921C6F69900727B68 /* GameWinViewController.swift in Sources */,
 				71C97CB521C6CEEF002E859E /* HostViewController.swift in Sources */,
 				71C97C8C21C5F353002E859E /* CrimeDetailsViewController.swift in Sources */,
 				71C97C9021C5F96F002E859E /* Crime.swift in Sources */,

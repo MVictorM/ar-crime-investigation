@@ -24,6 +24,8 @@ class HostViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var trialButton: UIButton!
+    @IBOutlet weak var nextClueButton: UIButton!
     
     
     // MARK: - Properties
@@ -33,8 +35,38 @@ class HostViewController: UIViewController {
     var garAnchor: GARAnchor?
     var state: HostARState?
     var roomCode: String?
-    var statusMessage: String?
+    var statusMessage: String? {
+        didSet {
+            self.updateStatusLabel()
+        }
+    }
     var crime: Crime!
+    var currentTurn = 0 {
+        didSet {
+            if self.currentTurn % self.crime.mandatoryTrialRound == 0 {
+                self.nextClueButton.isHidden = true
+                self.statusMessage = "Julgamento obrigatório"
+            } else {
+                self.nextClueButton.isHidden = false
+                self.statusMessage = "Pista \(self.currentTurn)/\(self.crime.numberTurns)"
+            }
+        }
+    }
+    
+    
+    // MARK: - Action
+    @IBAction func tapNextClueButton(_ sender: Any?) {
+        self.currentTurn += 1
+        // TODO: Reveal next clue
+    }
+    
+    @IBAction func tapTrialButton(_ sender: Any?) {
+        self.performSegue(withIdentifier: "toTrial", sender: nil)
+    }
+    
+    @IBAction func unwindFromResult(_ segue: UIStoryboardSegue) {
+        self.nextClueButton.isHidden = false
+    }
     
     
     // Mark - Overriding UIViewController
@@ -108,6 +140,10 @@ class HostViewController: UIViewController {
         if let waitingRoom = segue.destination as? WaitingRoomViewController {
             waitingRoom.crime = self.crime
         }
+        
+        if let trialVC = segue.destination as? TrialViewController {
+            trialVC.crime = self.crime
+        }
     }
     
     
@@ -130,6 +166,13 @@ class HostViewController: UIViewController {
     // MARK: - Helper Methods
     func updateStatusLabel() {
         self.statusLabel.text = self.statusMessage
+    }
+    
+    func hostingFinished() {
+        self.crime.roomNumber = Int(self.roomCode!)!
+        self.statusMessage = "Número da Cena: \(self.crime.roomNumber!)"
+        self.trialButton.isHidden = false
+        self.nextClueButton.isHidden = false
     }
     
     
@@ -162,12 +205,10 @@ class HostViewController: UIViewController {
             
         case .hostingFinished:
             self.statusMessage = "Cena fixada: \(self.garAnchor!.cloudState.message)"
-            self.crime.roomNumber = Int(self.roomCode!)!
-            self.performSegue(withIdentifier: "toWaitingRoom", sender: nil)
+            self.hostingFinished()
         }
         
         self.state = state
-        self.updateStatusLabel()
     }
     
     
@@ -231,8 +272,9 @@ extension HostViewController: ARSCNViewDelegate {
         if anchor is ARPlaneAnchor {
             return SCNNode()
         } else {
-            let scene = SCNScene(named: "example.scnassets/andy.scn")
-            return scene?.rootNode.childNode(withName: "andy", recursively: false)
+            let scene = SCNScene(named: "example.scnassets/andy.scn")!
+            let node = scene.rootNode.childNode(withName: "cone", recursively: false)!
+            return node
         }
     }
     
