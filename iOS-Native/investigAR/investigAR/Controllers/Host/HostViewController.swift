@@ -35,15 +35,19 @@ class HostViewController: UIViewController {
     var garAnchor: GARAnchor?
     var state: HostARState?
     var roomCode: String?
-    var statusMessage: String?
+    var statusMessage: String? {
+        didSet {
+            self.updateStatusLabel()
+        }
+    }
     var crime: Crime!
     var currentTurn = 0 {
         didSet {
             if self.currentTurn % self.crime.mandatoryTrialRound == 0 {
-                self.nextClueButton.isEnabled = false
+                self.nextClueButton.isHidden = true
                 self.statusMessage = "Julgamento obrigatório"
             } else {
-                self.nextClueButton.isEnabled = true
+                self.nextClueButton.isHidden = false
                 self.statusMessage = "Pista \(self.currentTurn)/\(self.crime.numberTurns)"
             }
         }
@@ -58,6 +62,10 @@ class HostViewController: UIViewController {
     
     @IBAction func tapTrialButton(_ sender: Any?) {
         self.performSegue(withIdentifier: "toTrial", sender: nil)
+    }
+    
+    @IBAction func unwindFromResult(_ segue: UIStoryboardSegue) {
+        self.nextClueButton.isHidden = false
     }
     
     
@@ -201,7 +209,6 @@ class HostViewController: UIViewController {
         }
         
         self.state = state
-        self.updateStatusLabel()
     }
     
     

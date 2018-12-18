@@ -18,36 +18,44 @@ class CrimeProvider {
                 Crime(
                     title: "Estudo em Rosa",
                     description: mockDescription,
-                    numberInvestigators: 4,
                     numberTurns: 10,
                     estimatedDuration: 10,
-                    available: false
+                    available: false,
+                    characters: [.doctor, .lawyer, .butcher, .programmer],
+                    deceased: .businessman,
+                    murderer: .doctor
                 ),
                 Crime(
                     title: "Banqueiro cego",
                     description: mockDescription,
-                    numberInvestigators: 4,
                     numberTurns: 12,
                     estimatedDuration: 15,
-                    available: false
+                    available: false,
+                    characters: [.doctor, .lawyer, .butcher, .businessman],
+                    deceased: .programmer,
+                    murderer: .doctor
                 )
             ],
             5: [
                 Crime(
                     title: "Noite no Cinema",
                     description: mockDescription,
-                    numberInvestigators: 5,
-                    numberTurns: 6,
+                    numberTurns: 9,
                     estimatedDuration: 8,
-                    available: true
+                    available: true,
+                    characters: [.doctor, .lawyer, .butcher, .programmer, .businessman],
+                    deceased: .journalist,
+                    murderer: .lawyer
                 ),
                 Crime(
                     title: "Caixão vazio",
                     description: mockDescription,
-                    numberInvestigators: 5,
                     numberTurns: 8,
                     estimatedDuration: 12,
-                    available: false
+                    available: false,
+                    characters: [.doctor, .lawyer, .butcher, .programmer, .businessman],
+                    deceased: .journalist,
+                    murderer: .lawyer
                 )
             ]
         ]
