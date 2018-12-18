@@ -102,7 +102,7 @@ extension ResolveViewController: ARSCNViewDelegate {
             return SCNNode()
         } else {
             let scene = SCNScene(named: "example.scnassets/andy.scn")
-            return scene?.rootNode.childNode(withName: "andy", recursively: false)
+            return scene?.rootNode.childNode(withName: "lumberJack", recursively: false)
         }
     }
     

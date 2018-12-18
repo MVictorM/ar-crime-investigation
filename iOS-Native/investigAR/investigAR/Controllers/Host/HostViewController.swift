@@ -60,7 +60,7 @@ class HostViewController: UIViewController {
         self.currentTurn += 1
         // TODO: Reveal next clue
         
-        if self.currentTurn - 1 <= self.clues.count {
+        if self.currentTurn - 1 < self.clues.count {
             let clue = self.clues[self.currentTurn-1]
             clue.isHidden = false
         }
