@@ -177,7 +177,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="n investigadores" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lx3-5Q-ttX">
-                                                    <rect key="frame" x="20" y="0.0" width="121" height="20"/>
+                                                    <rect key="frame" x="20" y="0.0" width="124.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -203,7 +203,7 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="150"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tRh-Kc-AnA">
-                                                                        <rect key="frame" x="64.5" y="63" width="51" height="24"/>
+                                                                        <rect key="frame" x="65.5" y="63" width="49.5" height="24"/>
                                                                         <fontDescription key="fontDescription" name="Barlow-Bold" family="Barlow" pointSize="20"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -465,7 +465,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6IZ-rc-UhG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="814"/>
+            <point key="canvasLocation" x="2654" y="1533"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bbi-yE-rq6">
+            <objects>
+                <viewController id="tGW-PP-xgW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hUZ-1e-kHU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sEd-Gi-ucX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMo-WE-dRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3471" y="814"/>
         </scene>
         <!--Host View Controller-->
         <scene sceneID="f8l-gr-OzM">
@@ -478,6 +493,30 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-5f-IKe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZ0-hX-owj">
+                                <rect key="frame" x="15" y="578" width="116" height="39"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Julgamento">
+                                    <color key="titleColor" name="Yellow"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapResolveButton:" destination="vnr-yd-ejN" eventType="touchUpInside" id="ZCJ-e1-10N"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rw4-D7-nhS">
+                                <rect key="frame" x="227" y="578" width="133" height="39"/>
+                                <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Próxima pista">
+                                    <color key="titleColor" name="Yellow"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapResolveButton:" destination="vnr-yd-ejN" eventType="touchUpInside" id="yaS-dB-i0T"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKI-zW-uYu">
                                 <rect key="frame" x="0.0" y="627" width="375" height="40"/>
                                 <color key="backgroundColor" red="0.73725490199999999" green="0.64705882349999999" blue="0.015686274510000001" alpha="0.79858732880000005" colorSpace="custom" customColorSpace="sRGB"/>
@@ -489,11 +528,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="top" secondItem="eN1-5f-IKe" secondAttribute="top" id="0e9-Wz-wap"/>
+                            <constraint firstItem="HZ0-hX-owj" firstAttribute="leading" secondItem="mAA-6f-J4L" secondAttribute="leading" constant="15" id="6mA-OR-Rdn"/>
+                            <constraint firstItem="mAA-6f-J4L" firstAttribute="trailing" secondItem="Rw4-D7-nhS" secondAttribute="trailing" constant="15" id="8Zk-7E-8We"/>
                             <constraint firstItem="mAA-6f-J4L" firstAttribute="bottom" secondItem="LKI-zW-uYu" secondAttribute="bottom" id="B3U-sw-d20"/>
                             <constraint firstItem="mAA-6f-J4L" firstAttribute="trailing" secondItem="eN1-5f-IKe" secondAttribute="trailing" id="QdD-3K-DGP"/>
+                            <constraint firstItem="LKI-zW-uYu" firstAttribute="top" secondItem="Rw4-D7-nhS" secondAttribute="bottom" constant="10" id="ccl-oo-gcU"/>
+                            <constraint firstItem="LKI-zW-uYu" firstAttribute="top" secondItem="HZ0-hX-owj" secondAttribute="bottom" constant="10" id="cy1-yE-Aow"/>
                             <constraint firstItem="LKI-zW-uYu" firstAttribute="width" secondItem="bXQ-sx-w6A" secondAttribute="width" id="dma-Oj-uML"/>
                             <constraint firstItem="LKI-zW-uYu" firstAttribute="centerX" secondItem="mAA-6f-J4L" secondAttribute="centerX" id="kXd-V9-MAd"/>
                             <constraint firstItem="eN1-5f-IKe" firstAttribute="bottom" secondItem="bXQ-sx-w6A" secondAttribute="bottom" id="r08-PF-9A0"/>
@@ -502,9 +545,12 @@
                         <viewLayoutGuide key="safeArea" id="mAA-6f-J4L"/>
                     </view>
                     <connections>
+                        <outlet property="nextClueButton" destination="Rw4-D7-nhS" id="uxb-Bd-asc"/>
                         <outlet property="sceneView" destination="eN1-5f-IKe" id="jen-8h-zMx"/>
                         <outlet property="statusLabel" destination="LKI-zW-uYu" id="9Mg-Um-b9T"/>
+                        <outlet property="trialButton" destination="HZ0-hX-owj" id="TAN-yD-Bkt"/>
                         <segue destination="gai-le-UdZ" kind="presentation" identifier="toWaitingRoom" id="8iU-EW-Wr8"/>
+                        <segue destination="tGW-PP-xgW" kind="presentation" id="4S3-rZ-72x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4RU-yJ-wWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -535,8 +581,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hko-tw-QGc">
                                 <rect key="frame" x="137" y="580" width="101" height="39"/>
                                 <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="22"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Fixar cena">
                                     <color key="titleColor" name="Yellow"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="tapResolveButton:" destination="vnr-yd-ejN" eventType="touchUpInside" id="n1Q-1n-j0t"/>

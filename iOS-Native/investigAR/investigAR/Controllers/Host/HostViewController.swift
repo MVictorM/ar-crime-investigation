@@ -24,6 +24,8 @@ class HostViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var trialButton: UIButton!
+    @IBOutlet weak var nextClueButton: UIButton!
     
     
     // MARK: - Properties
@@ -35,6 +37,28 @@ class HostViewController: UIViewController {
     var roomCode: String?
     var statusMessage: String?
     var crime: Crime!
+    var currentTurn = 0 {
+        didSet {
+            if self.currentTurn % self.crime.mandatoryTrialRound == 0 {
+                self.nextClueButton.isEnabled = false
+                self.statusMessage = "Julgamento obrigatório"
+            } else {
+                self.nextClueButton.isEnabled = true
+                self.statusMessage = "Pista \(self.currentTurn)/\(self.crime.numberTurns)"
+            }
+        }
+    }
+    
+    
+    // MARK: - Action
+    @IBAction func tapNextClueButton(_ sender: Any?) {
+        self.currentTurn += 1
+        // TODO: Reveal next clue
+    }
+    
+    @IBAction func tapTrialButton(_ sender: Any?) {
+        self.performSegue(withIdentifier: "toTrial", sender: nil)
+    }
     
     
     // Mark - Overriding UIViewController
@@ -108,6 +132,10 @@ class HostViewController: UIViewController {
         if let waitingRoom = segue.destination as? WaitingRoomViewController {
             waitingRoom.crime = self.crime
         }
+        
+        if let trialVC = segue.destination as? TrialViewController {
+            trialVC.crime = self.crime
+        }
     }
     
     
@@ -130,6 +158,13 @@ class HostViewController: UIViewController {
     // MARK: - Helper Methods
     func updateStatusLabel() {
         self.statusLabel.text = self.statusMessage
+    }
+    
+    func hostingFinished() {
+        self.crime.roomNumber = Int(self.roomCode!)!
+        self.statusMessage = "Número da Cena: \(self.crime.roomNumber!)"
+        self.trialButton.isHidden = false
+        self.nextClueButton.isHidden = false
     }
     
     
@@ -162,8 +197,7 @@ class HostViewController: UIViewController {
             
         case .hostingFinished:
             self.statusMessage = "Cena fixada: \(self.garAnchor!.cloudState.message)"
-            self.crime.roomNumber = Int(self.roomCode!)!
-            self.performSegue(withIdentifier: "toWaitingRoom", sender: nil)
+            self.hostingFinished()
         }
         
         self.state = state

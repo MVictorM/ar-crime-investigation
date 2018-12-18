@@ -16,6 +16,9 @@ struct Crime {
     let estimatedDuration: Int
     let available: Bool
     var roomNumber: Int?
+    lazy var mandatoryTrialRound = {
+        return self.numberTurns / self.numberInvestigators
+    }()
     
     init(title: String, description: String, numberInvestigators: Int, numberTurns: Int,
          estimatedDuration: Int, available: Bool, roomNumber: Int? = nil) {
