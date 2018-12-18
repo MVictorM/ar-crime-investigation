@@ -52,12 +52,18 @@ class HostViewController: UIViewController {
             }
         }
     }
+    var clues: [SCNNode] = []
     
     
     // MARK: - Action
     @IBAction func tapNextClueButton(_ sender: Any?) {
         self.currentTurn += 1
         // TODO: Reveal next clue
+        
+        if self.currentTurn - 1 <= self.clues.count {
+            let clue = self.clues[self.currentTurn-1]
+            clue.isHidden = false
+        }
     }
     
     @IBAction func tapTrialButton(_ sender: Any?) {
@@ -274,6 +280,12 @@ extension HostViewController: ARSCNViewDelegate {
         } else {
             let scene = SCNScene(named: "example.scnassets/andy.scn")!
             let node = scene.rootNode.childNode(withName: "lumberJack", recursively: false)!
+            
+            let child = scene.rootNode.childNode(withName: "cherub", recursively: false)!
+            child.isHidden = true
+            node.addChildNode(child)
+            self.clues.append(child)
+            
             return node
         }
     }
