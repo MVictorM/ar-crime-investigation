@@ -273,7 +273,7 @@ extension HostViewController: ARSCNViewDelegate {
             return SCNNode()
         } else {
             let scene = SCNScene(named: "example.scnassets/andy.scn")!
-            let node = scene.rootNode.childNode(withName: "cone", recursively: false)!
+            let node = scene.rootNode.childNode(withName: "lumberJack", recursively: false)!
             return node
         }
     }
