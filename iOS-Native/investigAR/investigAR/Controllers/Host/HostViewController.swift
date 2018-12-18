@@ -231,8 +231,9 @@ extension HostViewController: ARSCNViewDelegate {
         if anchor is ARPlaneAnchor {
             return SCNNode()
         } else {
-            let scene = SCNScene(named: "example.scnassets/andy.scn")
-            return scene?.rootNode.childNode(withName: "andy", recursively: false)
+            let scene = SCNScene(named: "example.scnassets/andy.scn")!
+            let node = scene.rootNode.childNode(withName: "cone", recursively: false)!
+            return node
         }
     }
     
